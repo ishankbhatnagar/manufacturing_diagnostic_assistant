@@ -11,10 +11,6 @@ captured and written back into the knowledge base, so the next technician who hi
 problem gets the answer instantly. The capture loop is a working model of Nonaka's SECI
 tacit-to-explicit knowledge conversion framework.
 
-## Status
-
-Phases 00-10 done. See `STATUS.md` for the full build log, architecture notes, and gotchas.
-
 ## Architecture
 
 - **Dify** (self-hosted) — agent workflow: diagnostic reasoning, confidence scoring, escalation
