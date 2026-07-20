@@ -1,0 +1,11 @@
+{
+  "ticket_id": "TKT-20260718-144723-cdee",
+  "status": "open",
+  "created_at": "2026-07-18T14:47:23.901363+00:00",
+  "symptom_report": "Gearbox is running hotter than usual and there's a slightly odd smell near the drive end.",
+  "ai_notes": "Found references to motor thermal overload (MTR-01) and belt tension issues, but they don't directly explain a gearbox running hot with an odd smell.",
+  "retrieved_context": "[incident-log] INC-MTR-01-1.md (fault mode: MTR-01) -- relevance 0.42\nMotor tripped on thermal overload after prolonged high-load run...",
+  "related_fault_mode_ids": [
+    "MTR-01"
+  ]
+}

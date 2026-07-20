@@ -1,0 +1,34 @@
+[
+  {
+    "filename": "vfd01_display.png",
+    "fault_mode_id": "VFD-01",
+    "expected_text_contains": [
+      "E003",
+      "OVERCURRENT"
+    ]
+  },
+  {
+    "filename": "mtr01_display.png",
+    "fault_mode_id": "MTR-01",
+    "expected_text_contains": [
+      "OL TRIP",
+      "MOTOR THERMAL"
+    ]
+  },
+  {
+    "filename": "plc01_hmi.png",
+    "fault_mode_id": "PLC-01",
+    "expected_text_contains": [
+      "COMM FAULT",
+      "PLC LINK LOST"
+    ]
+  },
+  {
+    "filename": "elec01_display.png",
+    "fault_mode_id": "ELEC-01",
+    "expected_text_contains": [
+      "UNDER VOLTAGE",
+      "SUPPLY SAG"
+    ]
+  }
+]

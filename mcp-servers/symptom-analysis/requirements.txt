@@ -1,0 +1,6 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+mcp[cli]>=1.2.0
+easyocr>=1.7.0
+Pillow
+torch
+torchvision

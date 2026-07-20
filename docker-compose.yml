@@ -1,0 +1,91 @@
+# Containerizes this repo's own services: the 4 MCP servers, the backend,
+# and the frontend. Dify itself is deliberately NOT vendored in here -- it
+# runs from its own separate self-hosted clone/compose project
+# (~/projects/dify-platform/docker), see README.md and STATUS.md for why.
+# Bring that up first (or separately), then `docker compose up -d` here.
+#
+# The MCP servers publish the same ports (8001-8004) Dify's own compose
+# project already expects via host.docker.internal:<port>/mcp, so nothing
+# on the Dify side needs to change whether these run as plain local
+# processes (see STATUS.md) or via this compose file.
+
+services:
+  manual-rag-search:
+    build:
+      context: .
+      dockerfile: mcp-servers/manual-rag-search/Dockerfile
+    ports:
+      - "8001:8001"
+    volumes:
+      - knowledge_base:/app/knowledge-base
+      - rag_index:/app/mcp-servers/manual-rag-search/index
+      - hf_cache:/root/.cache/huggingface
+    restart: unless-stopped
+
+  symptom-analysis:
+    build:
+      context: .
+      dockerfile: mcp-servers/symptom-analysis/Dockerfile
+    ports:
+      - "8002:8002"
+    restart: unless-stopped
+
+  escalation-ticketing:
+    build:
+      context: .
+      dockerfile: mcp-servers/escalation-ticketing/Dockerfile
+    ports:
+      - "8003:8003"
+    volumes:
+      - tickets_data:/app/data
+    restart: unless-stopped
+
+  knowledge-ingestion:
+    build:
+      context: .
+      dockerfile: mcp-servers/knowledge-ingestion/Dockerfile
+    ports:
+      - "8004:8004"
+    volumes:
+      - tickets_data:/app/data
+      - knowledge_base:/app/knowledge-base
+      - rag_index:/app/mcp-servers/manual-rag-search/index
+      - hf_cache:/root/.cache/huggingface
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8005:8005"
+    volumes:
+      - tickets_data:/app/data
+      - knowledge_base:/app/knowledge-base
+      - rag_index:/app/mcp-servers/manual-rag-search/index
+      - hf_cache:/root/.cache/huggingface
+    env_file:
+      - backend/.env
+    environment:
+      # Overrides backend/.env's localhost value -- from inside this
+      # container, Dify's host-published port is reached via
+      # host.docker.internal, same pattern used throughout this project
+      # (see STATUS.md's SSRF-proxy gotcha) for containers reaching the host.
+      DIFY_API_BASE: http://host.docker.internal/v1
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  tickets_data:
+  knowledge_base:
+  rag_index:
+  hf_cache:

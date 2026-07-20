@@ -1,0 +1,341 @@
+[
+  {
+    "scenario_id": "MTR-01-S1",
+    "fault_mode_id": "MTR-01",
+    "subsystem": "motor_drive",
+    "documented": true,
+    "symptom_report": "Conveyor motor keeps tripping on overload after running for about 20 minutes.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clear the fan shroud and cooling fins"
+  },
+  {
+    "scenario_id": "MTR-01-S2",
+    "fault_mode_id": "MTR-01",
+    "subsystem": "motor_drive",
+    "documented": true,
+    "symptom_report": "Line 7 drive motor shuts down on a thermal fault mid-shift, restarts fine once it cools.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clear the fan shroud and cooling fins"
+  },
+  {
+    "scenario_id": "MTR-01-S3",
+    "fault_mode_id": "MTR-01",
+    "subsystem": "motor_drive",
+    "documented": true,
+    "symptom_report": "Getting repeated OL trips on the conveyor motor once the line has been running a while.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clear the fan shroud and cooling fins"
+  },
+  {
+    "scenario_id": "VFD-01-S1",
+    "fault_mode_id": "VFD-01",
+    "subsystem": "vfd",
+    "documented": true,
+    "symptom_report": "VFD is throwing E003 and won't let the line restart.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clear any mechanical jam on the conveyor bed before re-attempting start"
+  },
+  {
+    "scenario_id": "VFD-01-S2",
+    "fault_mode_id": "VFD-01",
+    "subsystem": "vfd",
+    "documented": true,
+    "symptom_report": "Drive faults out with an overcurrent code right at line start-up, every time.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clear any mechanical jam on the conveyor bed before re-attempting start"
+  },
+  {
+    "scenario_id": "VFD-01-S3",
+    "fault_mode_id": "VFD-01",
+    "subsystem": "vfd",
+    "documented": true,
+    "symptom_report": "E003 on the VFD display, conveyor won't move at all this morning.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clear any mechanical jam on the conveyor bed before re-attempting start"
+  },
+  {
+    "scenario_id": "CNV-01-S1",
+    "fault_mode_id": "CNV-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": true,
+    "symptom_report": "Belt seems to be slipping on the drive pulley, panels are arriving late to station 3.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clean the pulley surface with the approved degreaser if contamination is found"
+  },
+  {
+    "scenario_id": "CNV-01-S2",
+    "fault_mode_id": "CNV-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": true,
+    "symptom_report": "Conveyor speed looks inconsistent even though the VFD readout is steady.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clean the pulley surface with the approved degreaser if contamination is found"
+  },
+  {
+    "scenario_id": "CNV-01-S3",
+    "fault_mode_id": "CNV-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": true,
+    "symptom_report": "Hearing a rhythmic squeal from the drive end, and the line is running slower than takt.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Clean the pulley surface with the approved degreaser if contamination is found"
+  },
+  {
+    "scenario_id": "SEN-01-S1",
+    "fault_mode_id": "SEN-01",
+    "subsystem": "sensors",
+    "documented": true,
+    "symptom_report": "Line keeps false-stopping like it thinks a panel is there when it isn't.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Realign the sensor bracket using the laser alignment jig and re-torque the mounting screw"
+  },
+  {
+    "scenario_id": "SEN-01-S2",
+    "fault_mode_id": "SEN-01",
+    "subsystem": "sensors",
+    "documented": true,
+    "symptom_report": "Part-present sensor at station 2 is flaky, sometimes it just doesn't see the panel at all.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Realign the sensor bracket using the laser alignment jig and re-torque the mounting screw"
+  },
+  {
+    "scenario_id": "SEN-01-S3",
+    "fault_mode_id": "SEN-01",
+    "subsystem": "sensors",
+    "documented": true,
+    "symptom_report": "Getting random stops with no part jam, sensor light looks like it's flickering.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Realign the sensor bracket using the laser alignment jig and re-torque the mounting screw"
+  },
+  {
+    "scenario_id": "PNU-01-S1",
+    "fault_mode_id": "PNU-01",
+    "subsystem": "pneumatic",
+    "documented": true,
+    "symptom_report": "Panel clamp isn't holding tight, panels shift slightly during the press cycle.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Replace any cracked line or reseat/replace a loose fitting"
+  },
+  {
+    "scenario_id": "PNU-01-S2",
+    "fault_mode_id": "PNU-01",
+    "subsystem": "pneumatic",
+    "documented": true,
+    "symptom_report": "Pressure gauge on the clamp unit reads low compared to the shift start checklist value.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Replace any cracked line or reseat/replace a loose fitting"
+  },
+  {
+    "scenario_id": "PNU-01-S3",
+    "fault_mode_id": "PNU-01",
+    "subsystem": "pneumatic",
+    "documented": true,
+    "symptom_report": "Hearing a faint hiss near the clamp cylinder, and clamp force seems weak.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Replace any cracked line or reseat/replace a loose fitting"
+  },
+  {
+    "scenario_id": "PLC-01-S1",
+    "fault_mode_id": "PLC-01",
+    "subsystem": "plc",
+    "documented": true,
+    "symptom_report": "HMI keeps showing a comms fault for a second or two, then it clears itself.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Reseat or replace the connector if pins show wear or corrosion"
+  },
+  {
+    "scenario_id": "PLC-01-S2",
+    "fault_mode_id": "PLC-01",
+    "subsystem": "plc",
+    "documented": true,
+    "symptom_report": "Line hiccups randomly with a PLC timeout error, no pattern to when it happens.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Reseat or replace the connector if pins show wear or corrosion"
+  },
+  {
+    "scenario_id": "PLC-01-S3",
+    "fault_mode_id": "PLC-01",
+    "subsystem": "plc",
+    "documented": true,
+    "symptom_report": "Getting sporadic communication faults on the control panel, maybe a few times a shift.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "Reseat or replace the connector if pins show wear or corrosion"
+  },
+  {
+    "scenario_id": "ELEC-01-S1",
+    "fault_mode_id": "ELEC-01",
+    "subsystem": "electrical",
+    "documented": true,
+    "symptom_report": "Line trips out right around shift-change every time, like clockwork.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "If sag is confirmed and within utility tolerance, stagger Line 7's start-up by 2-3 minutes relative to other lines"
+  },
+  {
+    "scenario_id": "ELEC-01-S2",
+    "fault_mode_id": "ELEC-01",
+    "subsystem": "electrical",
+    "documented": true,
+    "symptom_report": "We get a nuisance fault every day around the same time in the morning.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "If sag is confirmed and within utility tolerance, stagger Line 7's start-up by 2-3 minutes relative to other lines"
+  },
+  {
+    "scenario_id": "ELEC-01-S3",
+    "fault_mode_id": "ELEC-01",
+    "subsystem": "electrical",
+    "documented": true,
+    "symptom_report": "Drive faults right when the other lines are all starting up together.",
+    "expected_outcome": "answer",
+    "expected_fix_summary": "If sag is confirmed and within utility tolerance, stagger Line 7's start-up by 2-3 minutes relative to other lines"
+  },
+  {
+    "scenario_id": "BRG-01-S1",
+    "fault_mode_id": "BRG-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": false,
+    "symptom_report": "Not really a fault code, but the drive end sounds different lately, kind of a high whine.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "That high, steady whine — not a rattle, not a knock, a whine — is the tell for a bearing starting to go dry. It won't throw any code because load and current bo...",
+    "expert_resolution_text": "That high, steady whine — not a rattle, not a knock, a whine — is the tell for a bearing starting to go dry. It won't throw any code because load and current both look normal right up until it seizes, sometimes with only a day or two of warning. I put two fingers on the bearing housing (power still on, hand flat, never wrap fingers around anything moving) and if it's noticeably warmer than the opposite side bearing, that confirms it. Swap it on the next planned stop, don't wait for a code, because by the time it faults you're looking at an unplanned line-down and possible shaft damage instead of a 40-minute bearing swap."
+  },
+  {
+    "scenario_id": "BRG-01-S2",
+    "fault_mode_id": "BRG-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": false,
+    "symptom_report": "Everything's running fine on paper, but there's a new noise from the tail pulley I can't place.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "That high, steady whine — not a rattle, not a knock, a whine — is the tell for a bearing starting to go dry. It won't throw any code because load and current bo...",
+    "expert_resolution_text": "That high, steady whine — not a rattle, not a knock, a whine — is the tell for a bearing starting to go dry. It won't throw any code because load and current both look normal right up until it seizes, sometimes with only a day or two of warning. I put two fingers on the bearing housing (power still on, hand flat, never wrap fingers around anything moving) and if it's noticeably warmer than the opposite side bearing, that confirms it. Swap it on the next planned stop, don't wait for a code, because by the time it faults you're looking at an unplanned line-down and possible shaft damage instead of a 40-minute bearing swap."
+  },
+  {
+    "scenario_id": "BRG-01-S3",
+    "fault_mode_id": "BRG-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": false,
+    "symptom_report": "No errors on the HMI, just a faint whine that gets louder toward end of shift.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "That high, steady whine — not a rattle, not a knock, a whine — is the tell for a bearing starting to go dry. It won't throw any code because load and current bo...",
+    "expert_resolution_text": "That high, steady whine — not a rattle, not a knock, a whine — is the tell for a bearing starting to go dry. It won't throw any code because load and current both look normal right up until it seizes, sometimes with only a day or two of warning. I put two fingers on the bearing housing (power still on, hand flat, never wrap fingers around anything moving) and if it's noticeably warmer than the opposite side bearing, that confirms it. Swap it on the next planned stop, don't wait for a code, because by the time it faults you're looking at an unplanned line-down and possible shaft damage instead of a 40-minute bearing swap."
+  },
+  {
+    "scenario_id": "ENC-01-S1",
+    "fault_mode_id": "ENC-01",
+    "subsystem": "motor_drive",
+    "documented": false,
+    "symptom_report": "Panels have been landing a couple millimeters off at station 4, but it's been gradual, not sudden.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "This one's sneaky because it never trips anything — the encoder count itself is fine, it's the coupling between the encoder shaft and the motor shaft that's slo...",
+    "expert_resolution_text": "This one's sneaky because it never trips anything — the encoder count itself is fine, it's the coupling between the encoder shaft and the motor shaft that's slowly slipping a fraction of a degree at a time from thermal cycling. You won't catch it by looking at the encoder counts in isolation. What I do is compare today's home-position offset against the value recorded in the commissioning sheet — if it's drifted more than about 0.5 degrees, the coupling needs to be re-clamped and the axis re-homed. Left alone it keeps creeping and eventually you get intermittent part rejects that look like a totally unrelated tooling problem."
+  },
+  {
+    "scenario_id": "ENC-01-S2",
+    "fault_mode_id": "ENC-01",
+    "subsystem": "motor_drive",
+    "documented": false,
+    "symptom_report": "Registration's drifted slightly over the past week or two, nothing threw an alarm though.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "This one's sneaky because it never trips anything — the encoder count itself is fine, it's the coupling between the encoder shaft and the motor shaft that's slo...",
+    "expert_resolution_text": "This one's sneaky because it never trips anything — the encoder count itself is fine, it's the coupling between the encoder shaft and the motor shaft that's slowly slipping a fraction of a degree at a time from thermal cycling. You won't catch it by looking at the encoder counts in isolation. What I do is compare today's home-position offset against the value recorded in the commissioning sheet — if it's drifted more than about 0.5 degrees, the coupling needs to be re-clamped and the axis re-homed. Left alone it keeps creeping and eventually you get intermittent part rejects that look like a totally unrelated tooling problem."
+  },
+  {
+    "scenario_id": "ENC-01-S3",
+    "fault_mode_id": "ENC-01",
+    "subsystem": "motor_drive",
+    "documented": false,
+    "symptom_report": "Position looks slightly off compared to last month, hard to say exactly when it started.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "This one's sneaky because it never trips anything — the encoder count itself is fine, it's the coupling between the encoder shaft and the motor shaft that's slo...",
+    "expert_resolution_text": "This one's sneaky because it never trips anything — the encoder count itself is fine, it's the coupling between the encoder shaft and the motor shaft that's slowly slipping a fraction of a degree at a time from thermal cycling. You won't catch it by looking at the encoder counts in isolation. What I do is compare today's home-position offset against the value recorded in the commissioning sheet — if it's drifted more than about 0.5 degrees, the coupling needs to be re-clamped and the axis re-homed. Left alone it keeps creeping and eventually you get intermittent part rejects that look like a totally unrelated tooling problem."
+  },
+  {
+    "scenario_id": "VFD-02-S1",
+    "fault_mode_id": "VFD-02",
+    "subsystem": "vfd",
+    "documented": false,
+    "symptom_report": "VFD throws a random fault only when the welding cell next door is running its heavy cycle.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "Nobody believes this the first time, but the welding robot cell next door puts harmonic noise back onto the shared supply feed during its high-current weld puls...",
+    "expert_resolution_text": "Nobody believes this the first time, but the welding robot cell next door puts harmonic noise back onto the shared supply feed during its high-current weld pulses, and our VFD's input filter was never sized for that. It only shows up when both lines are running heavy at the same time, which is why it looks random — it's not random, it's correlated with their cycle, just on a different line so nobody thinks to check it. Fastest confirmation: ask their operator to run one isolated weld cycle while you watch our VFD's DC bus ripple reading. If it spikes in sync, that's your answer. Real fix is an input line reactor on our VFD, but until that's installed, avoid scheduling our high-load changeovers during their heavy weld blocks."
+  },
+  {
+    "scenario_id": "VFD-02-S2",
+    "fault_mode_id": "VFD-02",
+    "subsystem": "vfd",
+    "documented": false,
+    "symptom_report": "Drive faults seem to line up with the robot cell doing its big weld sequence, but I'm not 100% sure.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "Nobody believes this the first time, but the welding robot cell next door puts harmonic noise back onto the shared supply feed during its high-current weld puls...",
+    "expert_resolution_text": "Nobody believes this the first time, but the welding robot cell next door puts harmonic noise back onto the shared supply feed during its high-current weld pulses, and our VFD's input filter was never sized for that. It only shows up when both lines are running heavy at the same time, which is why it looks random — it's not random, it's correlated with their cycle, just on a different line so nobody thinks to check it. Fastest confirmation: ask their operator to run one isolated weld cycle while you watch our VFD's DC bus ripple reading. If it spikes in sync, that's your answer. Real fix is an input line reactor on our VFD, but until that's installed, avoid scheduling our high-load changeovers during their heavy weld blocks."
+  },
+  {
+    "scenario_id": "VFD-02-S3",
+    "fault_mode_id": "VFD-02",
+    "subsystem": "vfd",
+    "documented": false,
+    "symptom_report": "Sporadic drive fault, and now that I think about it, it's always when the neighboring cell is busy.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "Nobody believes this the first time, but the welding robot cell next door puts harmonic noise back onto the shared supply feed during its high-current weld puls...",
+    "expert_resolution_text": "Nobody believes this the first time, but the welding robot cell next door puts harmonic noise back onto the shared supply feed during its high-current weld pulses, and our VFD's input filter was never sized for that. It only shows up when both lines are running heavy at the same time, which is why it looks random — it's not random, it's correlated with their cycle, just on a different line so nobody thinks to check it. Fastest confirmation: ask their operator to run one isolated weld cycle while you watch our VFD's DC bus ripple reading. If it spikes in sync, that's your answer. Real fix is an input line reactor on our VFD, but until that's installed, avoid scheduling our high-load changeovers during their heavy weld blocks."
+  },
+  {
+    "scenario_id": "GBX-01-S1",
+    "fault_mode_id": "GBX-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": false,
+    "symptom_report": "Gearbox is running hotter than usual and there's a slightly odd smell near the drive end.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "Milky or foamy grease at the breather almost always means someone topped up with the wrong lubricant grade during a changeover — there are two gearboxes on this...",
+    "expert_resolution_text": "Milky or foamy grease at the breather almost always means someone topped up with the wrong lubricant grade during a changeover — there are two gearboxes on this line that look identical but spec different synthetic greases, and they don't mix well; the wrong one breaks down and foams under heat instead of lubricating properly. If you see that residue, don't just top it up again, that makes it worse. Full drain, flush with the correct grade, and refill to the sight glass line. I'd also tag the grease gun used for that changeover so whoever did it doesn't repeat it on the other line."
+  },
+  {
+    "scenario_id": "GBX-01-S2",
+    "fault_mode_id": "GBX-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": false,
+    "symptom_report": "Noticed some foamy-looking residue near the gearbox breather, not sure if that's normal.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "Milky or foamy grease at the breather almost always means someone topped up with the wrong lubricant grade during a changeover — there are two gearboxes on this...",
+    "expert_resolution_text": "Milky or foamy grease at the breather almost always means someone topped up with the wrong lubricant grade during a changeover — there are two gearboxes on this line that look identical but spec different synthetic greases, and they don't mix well; the wrong one breaks down and foams under heat instead of lubricating properly. If you see that residue, don't just top it up again, that makes it worse. Full drain, flush with the correct grade, and refill to the sight glass line. I'd also tag the grease gun used for that changeover so whoever did it doesn't repeat it on the other line."
+  },
+  {
+    "scenario_id": "GBX-01-S3",
+    "fault_mode_id": "GBX-01",
+    "subsystem": "conveyor_mechanical",
+    "documented": false,
+    "symptom_report": "Gearbox oil looks a bit milky when I checked the sight glass, temperature's up a few degrees too.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "Milky or foamy grease at the breather almost always means someone topped up with the wrong lubricant grade during a changeover — there are two gearboxes on this...",
+    "expert_resolution_text": "Milky or foamy grease at the breather almost always means someone topped up with the wrong lubricant grade during a changeover — there are two gearboxes on this line that look identical but spec different synthetic greases, and they don't mix well; the wrong one breaks down and foams under heat instead of lubricating properly. If you see that residue, don't just top it up again, that makes it worse. Full drain, flush with the correct grade, and refill to the sight glass line. I'd also tag the grease gun used for that changeover so whoever did it doesn't repeat it on the other line."
+  },
+  {
+    "scenario_id": "GND-01-S1",
+    "fault_mode_id": "GND-01",
+    "subsystem": "sensors",
+    "documented": false,
+    "symptom_report": "Sensors glitch out only on dry days, seems worse in winter for some reason.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "The humidity correlation is the giveaway — that's static, not a sensor defect. The door-panel liner material builds a static charge as it slides across the conv...",
+    "expert_resolution_text": "The humidity correlation is the giveaway — that's static, not a sensor defect. The door-panel liner material builds a static charge as it slides across the conveyor bed, and it should discharge harmlessly through the frame's grounding strap. One of those straps near station 2 has been loose for a while, so instead of discharging cleanly it sometimes arcs near the sensor wiring and causes a brief glitch. Check the grounding strap continuity with a multimeter, not just a visual check, because it can look connected but have a bad crimp. Re-terminate it and the dry-day glitches stop."
+  },
+  {
+    "scenario_id": "GND-01-S2",
+    "fault_mode_id": "GND-01",
+    "subsystem": "sensors",
+    "documented": false,
+    "symptom_report": "Getting weird one-off sensor faults that clear themselves, mostly when humidity's low.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "The humidity correlation is the giveaway — that's static, not a sensor defect. The door-panel liner material builds a static charge as it slides across the conv...",
+    "expert_resolution_text": "The humidity correlation is the giveaway — that's static, not a sensor defect. The door-panel liner material builds a static charge as it slides across the conveyor bed, and it should discharge harmlessly through the frame's grounding strap. One of those straps near station 2 has been loose for a while, so instead of discharging cleanly it sometimes arcs near the sensor wiring and causes a brief glitch. Check the grounding strap continuity with a multimeter, not just a visual check, because it can look connected but have a bad crimp. Re-terminate it and the dry-day glitches stop."
+  },
+  {
+    "scenario_id": "GND-01-S3",
+    "fault_mode_id": "GND-01",
+    "subsystem": "sensors",
+    "documented": false,
+    "symptom_report": "Random single-cycle sensor fault, no pattern except it seems to happen more when it's dry out.",
+    "expected_outcome": "escalate",
+    "expected_fix_summary": "The humidity correlation is the giveaway — that's static, not a sensor defect. The door-panel liner material builds a static charge as it slides across the conv...",
+    "expert_resolution_text": "The humidity correlation is the giveaway — that's static, not a sensor defect. The door-panel liner material builds a static charge as it slides across the conveyor bed, and it should discharge harmlessly through the frame's grounding strap. One of those straps near station 2 has been loose for a while, so instead of discharging cleanly it sometimes arcs near the sensor wiring and causes a brief glitch. Check the grounding strap continuity with a multimeter, not just a visual check, because it can look connected but have a bad crimp. Re-terminate it and the dry-day glitches stop."
+  }
+]

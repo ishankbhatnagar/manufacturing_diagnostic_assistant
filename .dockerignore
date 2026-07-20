@@ -1,0 +1,14 @@
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/node_modules/
+**/dist/
+**/.env
+**/*.log
+mcp-servers/manual-rag-search/index/
+frontend/dist/
+eval/results/
+eval/.env
+backend/.env
+.git/
