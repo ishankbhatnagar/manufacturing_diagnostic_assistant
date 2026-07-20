@@ -1,7 +1,5 @@
 # Manufacturing Diagnostic Assistant
 
-By Ishank Bhatnagar
-
 A shop-floor diagnostic copilot for manufacturing troubleshooting that captures tacit expert
 knowledge instead of just answering questions from static docs.
 
