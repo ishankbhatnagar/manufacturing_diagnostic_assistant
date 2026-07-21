@@ -59,4 +59,4 @@ Frontend: http://localhost:5173 · Backend: http://localhost:8005 · MCP servers
 (published on the same ports either way, so Dify's `host.docker.internal:<port>/mcp`
 registration doesn't need to change based on which way you run them).
 
-https://github.com/user-attachments/assets/c3ad3cd5-a953-4fb9-a5a7-ea14bf630d0c
+https://github.com/user-attachments/assets/575ce9b7-d265-49f1-97ac-5580568c51dd
