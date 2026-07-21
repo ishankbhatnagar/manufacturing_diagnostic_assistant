@@ -58,3 +58,5 @@ docker compose up -d --build
 Frontend: http://localhost:5173 · Backend: http://localhost:8005 · MCP servers: 8001-8004
 (published on the same ports either way, so Dify's `host.docker.internal:<port>/mcp`
 registration doesn't need to change based on which way you run them).
+
+https://github.com/user-attachments/assets/c3ad3cd5-a953-4fb9-a5a7-ea14bf630d0c
